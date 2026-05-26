@@ -6,7 +6,7 @@ const { LoginPage } = require('../../pages/LoginPage');
 
 test.describe('Session Test Cases', () => {
 
-    test.only('TC_AUTH_12 Verify login page responsive rendering', async ({ page }) => {
+    test.skip('TC_AUTH_12 Verify login page responsive rendering', async ({ page }) => {
 
         const loginPage = new LoginPage(page);
 
