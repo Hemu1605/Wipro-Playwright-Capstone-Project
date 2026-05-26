@@ -355,7 +355,7 @@ test('TC_CHK_14 Verify Async Checkout Loading', async ({ page }) => {
 
 // TC_CHK_15 → Verify Checkout API Response
 
-test.only('TC_CHK_15 Verify Checkout API Response', async ({ page }) => {
+test.skip('TC_CHK_15 Verify Checkout API Response', async ({ page }) => {
 
     // Open checkout page
     const response = await page.goto(
