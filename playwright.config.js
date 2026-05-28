@@ -11,6 +11,7 @@ module.exports = defineConfig({
   fullyParallel: true,
 
   reporter: [
+    ['list'],
     ['html'],
     ['allure-playwright']
   ],
