@@ -255,7 +255,7 @@ test('TC_WSH_14 Verify Wishlist Auth Visibility', async ({ page }) => {
 
 // TC_WSH_15 → Verify Wishlist API Response
 
-test.skip('TC_WSH_15 Verify Wishlist API Response', async ({ page }) => {
+test('TC_WSH_15 Verify Wishlist API Response', async ({ page }) => {
 
     // Open wishlist page
     const response = await page.goto(

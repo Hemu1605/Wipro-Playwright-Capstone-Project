@@ -307,7 +307,7 @@ test('TC_PRF_14 Verify Authenticated User Visibility', async ({ page }) => {
 
 // TC_PRF_15 → Verify Profile API Response
 
-test.skip('TC_PRF_15 Verify Profile API Response', async ({ page }) => {
+test('TC_PRF_15 Verify Profile API Response', async ({ page }) => {
 
     // Open profile related page
     const response = await page.goto(

@@ -15,13 +15,16 @@ module.exports = defineConfig({
     ['allure-playwright']
   ],
 
+  // 
+  
   use: {
-    baseURL: process.env.BASE_URL,
-    headless: true,
-    screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
-    trace: 'retain-on-failure',
-  },
+  headless: true,
+  screenshot: 'only-on-failure',
+  trace: 'on-first-retry'
+},
+
+workers: 1,
+retries: 1,
 
   projects: [
     {

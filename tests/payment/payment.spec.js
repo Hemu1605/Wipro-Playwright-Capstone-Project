@@ -261,7 +261,7 @@ test('TC_PAY_14 Verify Payment Screenshot Capture', async ({ page }) => {
 
 // TC_PAY_15 → Verify Payment API Response
 
-test.skip('TC_PAY_15 Verify Payment API Response', async ({ page }) => {
+test('TC_PAY_15 Verify Payment API Response', async ({ page }) => {
 
     // Open payment related page
     const response = await page.goto(

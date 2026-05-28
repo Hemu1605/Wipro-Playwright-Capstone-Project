@@ -83,7 +83,7 @@ test('TC_AUTH_08 Verify email format validation', async ({ page }) => {
 
 // TC_AUTH_09 → Duplicate Email Registration
 
-test.skip('TC_AUTH_09 Verify duplicate email registration', async ({ page }) => {
+test('TC_AUTH_09 Verify duplicate email registration', async ({ page }) => {
 
     const registerPage = new RegisterPage(page);
 

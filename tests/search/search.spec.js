@@ -283,7 +283,7 @@ test('TC_SRH_14 Verify async product loading', async ({ page }) => {
 
 // TC_SRH_15 → Verify search API response
 
-test.skip('TC_SRH_15 Verify search API response', async ({ page }) => {
+test('TC_SRH_15 Verify search API response', async ({ page }) => {
 
     // Open search page
     const response = await page.goto(
