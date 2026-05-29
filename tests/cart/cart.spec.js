@@ -29,29 +29,54 @@ test.describe('Shopping Cart Test Cases', () => {
 
 // TC_CART_02 → Verify Cart Quantity Update
 
+// test.only('TC_CART_02 Verify Cart Quantity Update', async ({ page }) => {
+
+//     const cartPage = new CartPage(page);
+
+//     // Open product page
+//     await cartPage.gotoProductPage();
+
+//     // Select processor
+//     await cartPage.selectProcessor();
+
+//     // Add product
+//     await cartPage.addProductToCart();
+
+//     // Open cart
+//     await cartPage.openCart();
+
+//     // Update quantity
+//     await cartPage.quantityInput.fill('2');
+
+//     // Click update cart
+//     await cartPage.updateCartButton.click();
+
+//     // Verify quantity updated
+//     await expect(cartPage.quantityInput)
+//         .toHaveValue('2');
+// });
+
 test('TC_CART_02 Verify Cart Quantity Update', async ({ page }) => {
 
     const cartPage = new CartPage(page);
 
-    // Open product page
     await cartPage.gotoProductPage();
 
-    // Select processor
     await cartPage.selectProcessor();
 
-    // Add product
     await cartPage.addProductToCart();
 
-    // Open cart
+    await expect(cartPage.successBar)
+        .toContainText('The product has been added');
+
     await cartPage.openCart();
 
-    // Update quantity
+    await page.waitForURL('**/cart');
+
     await cartPage.quantityInput.fill('2');
 
-    // Click update cart
     await cartPage.updateCartButton.click();
 
-    // Verify quantity updated
     await expect(cartPage.quantityInput)
         .toHaveValue('2');
 });
@@ -59,32 +84,62 @@ test('TC_CART_02 Verify Cart Quantity Update', async ({ page }) => {
 
 // TC_CART_03 → Verify Remove Product From Cart
 
-test('TC_CART_03 Verify Remove Product From Cart', async ({ page }) => {
+// test.only('TC_CART_03 Verify Remove Product From Cart', async ({ page }) => {
+
+//     const cartPage = new CartPage(page);
+
+//     // Open product page
+//     await cartPage.gotoProductPage();
+
+//     // Select processor
+//     await cartPage.selectProcessor();
+
+//     // Add product
+//     await cartPage.addProductToCart();
+
+//     // Open cart
+//     await cartPage.openCart();
+
+//     // Remove product
+//     await cartPage.removeCheckbox.check();
+
+//     // Update cart
+//     await cartPage.updateCartButton.click();
+
+//     // Verify empty cart message
+//     await expect(cartPage.emptyCartMessage)
+//         .toContainText('Your Shopping Cart is empty');
+// });
+
+
+test.only('TC_CART_03 Verify Remove Product From Cart', async ({ page }) => {
 
     const cartPage = new CartPage(page);
 
-    // Open product page
     await cartPage.gotoProductPage();
 
-    // Select processor
     await cartPage.selectProcessor();
 
-    // Add product
     await cartPage.addProductToCart();
 
-    // Open cart
+    await expect(cartPage.successBar)
+        .toContainText('The product has been added');
+
     await cartPage.openCart();
 
-    // Remove product
+    await page.waitForURL('**/cart');
+
+    await expect(cartPage.removeCheckbox)
+        .toBeVisible();
+
     await cartPage.removeCheckbox.check();
 
-    // Update cart
     await cartPage.updateCartButton.click();
 
-    // Verify empty cart message
     await expect(cartPage.emptyCartMessage)
         .toContainText('Your Shopping Cart is empty');
 });
+
 
 // TC_CART_04 → Verify Empty Cart Message
 

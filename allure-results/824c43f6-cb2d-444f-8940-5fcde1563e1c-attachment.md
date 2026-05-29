@@ -1,0 +1,382 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: cart/cart.spec.js >> TC_CART_10 Verify Negative Quantity Handling
+- Location: tests/cart/cart.spec.js:218:1
+
+# Error details
+
+```
+Test timeout of 60000ms exceeded.
+```
+
+```
+Error: locator.fill: Test timeout of 60000ms exceeded.
+Call log:
+  - waiting for locator('.qty-input').first()
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - link "Tricentis Demo Web Shop" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "Tricentis Demo Web Shop" [ref=e7]
+      - list [ref=e10]:
+        - listitem [ref=e11]:
+          - link "Register" [ref=e12] [cursor=pointer]:
+            - /url: /register
+        - listitem [ref=e13]:
+          - link "Log in" [ref=e14] [cursor=pointer]:
+            - /url: /login
+        - listitem [ref=e15]:
+          - link "Shopping cart (0)" [ref=e16] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=e17]: Shopping cart
+            - generic [ref=e18]: (0)
+        - listitem [ref=e19]:
+          - link "Wishlist (0)" [ref=e20] [cursor=pointer]:
+            - /url: /wishlist
+            - generic [ref=e21]: Wishlist
+            - generic [ref=e22]: (0)
+      - generic [ref=e24]:
+        - status [ref=e25]
+        - textbox [ref=e26]: Search store
+        - button "Search" [ref=e27] [cursor=pointer]
+    - list [ref=e29]:
+      - listitem [ref=e30]:
+        - link "Books" [ref=e31] [cursor=pointer]:
+          - /url: /books
+      - listitem [ref=e32]:
+        - link "Computers" [ref=e33] [cursor=pointer]:
+          - /url: /computers
+      - listitem [ref=e34]:
+        - link "Electronics" [ref=e35] [cursor=pointer]:
+          - /url: /electronics
+      - listitem [ref=e36]:
+        - link "Apparel & Shoes" [ref=e37] [cursor=pointer]:
+          - /url: /apparel-shoes
+      - listitem [ref=e38]:
+        - link "Digital downloads" [ref=e39] [cursor=pointer]:
+          - /url: /digital-downloads
+      - listitem [ref=e40]:
+        - link "Jewelry" [ref=e41] [cursor=pointer]:
+          - /url: /jewelry
+      - listitem [ref=e42]:
+        - link "Gift Cards" [ref=e43] [cursor=pointer]:
+          - /url: /gift-cards
+    - generic [ref=e44]:
+      - list [ref=e46]:
+        - listitem [ref=e47]:
+          - link "Cart" [ref=e48] [cursor=pointer]:
+            - /url: /cart
+        - listitem [ref=e49]: Address
+        - listitem [ref=e50]: Shipping
+        - listitem [ref=e51]: Payment
+        - listitem [ref=e52]: Confirm
+        - listitem [ref=e53]: Complete
+      - generic [ref=e54]:
+        - heading "Shopping cart" [level=1] [ref=e56]
+        - generic [ref=e58]: Your Shopping Cart is empty!
+  - generic [ref=e59]:
+    - generic [ref=e60]:
+      - generic [ref=e61]:
+        - heading "Information" [level=3] [ref=e62]
+        - list [ref=e63]:
+          - listitem [ref=e64]:
+            - link "Sitemap" [ref=e65] [cursor=pointer]:
+              - /url: /sitemap
+          - listitem [ref=e66]:
+            - link "Shipping & Returns" [ref=e67] [cursor=pointer]:
+              - /url: /shipping-returns
+          - listitem [ref=e68]:
+            - link "Privacy Notice" [ref=e69] [cursor=pointer]:
+              - /url: /privacy-policy
+          - listitem [ref=e70]:
+            - link "Conditions of Use" [ref=e71] [cursor=pointer]:
+              - /url: /conditions-of-use
+          - listitem [ref=e72]:
+            - link "About us" [ref=e73] [cursor=pointer]:
+              - /url: /about-us
+          - listitem [ref=e74]:
+            - link "Contact us" [ref=e75] [cursor=pointer]:
+              - /url: /contactus
+      - generic [ref=e76]:
+        - heading "Customer service" [level=3] [ref=e77]
+        - list [ref=e78]:
+          - listitem [ref=e79]:
+            - link "Search" [ref=e80] [cursor=pointer]:
+              - /url: /search
+          - listitem [ref=e81]:
+            - link "News" [ref=e82] [cursor=pointer]:
+              - /url: /news
+          - listitem [ref=e83]:
+            - link "Blog" [ref=e84] [cursor=pointer]:
+              - /url: /blog
+          - listitem [ref=e85]:
+            - link "Recently viewed products" [ref=e86] [cursor=pointer]:
+              - /url: /recentlyviewedproducts
+          - listitem [ref=e87]:
+            - link "Compare products list" [ref=e88] [cursor=pointer]:
+              - /url: /compareproducts
+          - listitem [ref=e89]:
+            - link "New products" [ref=e90] [cursor=pointer]:
+              - /url: /newproducts
+      - generic [ref=e91]:
+        - heading "My account" [level=3] [ref=e92]
+        - list [ref=e93]:
+          - listitem [ref=e94]:
+            - link "My account" [ref=e95] [cursor=pointer]:
+              - /url: /customer/info
+          - listitem [ref=e96]:
+            - link "Orders" [ref=e97] [cursor=pointer]:
+              - /url: /customer/orders
+          - listitem [ref=e98]:
+            - link "Addresses" [ref=e99] [cursor=pointer]:
+              - /url: /customer/addresses
+          - listitem [ref=e100]:
+            - link "Shopping cart" [ref=e101] [cursor=pointer]:
+              - /url: /cart
+          - listitem [ref=e102]:
+            - link "Wishlist" [ref=e103] [cursor=pointer]:
+              - /url: /wishlist
+      - generic [ref=e104]:
+        - heading "Follow us" [level=3] [ref=e105]
+        - list [ref=e106]:
+          - listitem [ref=e107]:
+            - link "Facebook" [ref=e108] [cursor=pointer]:
+              - /url: http://www.facebook.com/nopCommerce
+          - listitem [ref=e109]:
+            - link "Twitter" [ref=e110] [cursor=pointer]:
+              - /url: https://twitter.com/nopCommerce
+          - listitem [ref=e111]:
+            - link "RSS" [ref=e112] [cursor=pointer]:
+              - /url: /news/rss/1
+          - listitem [ref=e113]:
+            - link "YouTube" [ref=e114] [cursor=pointer]:
+              - /url: http://www.youtube.com/user/nopCommerce
+          - listitem [ref=e115]:
+            - link "Google+" [ref=e116] [cursor=pointer]:
+              - /url: https://plus.google.com/+nopcommerce
+    - generic [ref=e117]:
+      - text: Powered by
+      - link "nopCommerce" [ref=e118] [cursor=pointer]:
+        - /url: http://www.nopcommerce.com/
+    - generic [ref=e119]: Copyright © 2026 Tricentis Demo Web Shop. All rights reserved.
+```
+
+# Test source
+
+```ts
+  135 | 
+  136 |     // Open product page
+  137 |     await cartPage.gotoProductPage();
+  138 | 
+  139 |     // Select processor
+  140 |     await cartPage.selectProcessor();
+  141 | 
+  142 |     // Add product
+  143 |     await cartPage.addProductToCart();
+  144 | 
+  145 |     // Open cart
+  146 |     await cartPage.openCart();
+  147 | 
+  148 |     // Verify subtotal visible
+  149 |     await expect(cartPage.subtotal)
+  150 |         .toBeVisible();
+  151 | });
+  152 | 
+  153 | // TC_CART_07 → Verify Continue Shopping
+  154 | 
+  155 | test('TC_CART_07 Verify Continue Shopping', async ({ page }) => {
+  156 | 
+  157 |     const cartPage = new CartPage(page);
+  158 | 
+  159 |     // Open cart page
+  160 |     await page.goto(
+  161 |         'https://demowebshop.tricentis.com/cart'
+  162 |     );
+  163 | 
+  164 |     // Verify cart page loaded
+  165 |     await expect(cartPage.cartTable)
+  166 |         .toBeVisible();
+  167 | });
+  168 | 
+  169 | // TC_CART_08 → Verify Multiple Product Addition
+  170 | 
+  171 | test('TC_CART_08 Verify Multiple Product Addition', async ({ page }) => {
+  172 | 
+  173 |     const cartPage = new CartPage(page);
+  174 | 
+  175 |     // Open product page
+  176 |     await cartPage.gotoProductPage();
+  177 | 
+  178 |     // Select processor
+  179 |     await cartPage.selectProcessor();
+  180 | 
+  181 |     // Add product twice
+  182 |     await cartPage.addProductToCart();
+  183 | 
+  184 |     await cartPage.addProductToCart();
+  185 | 
+  186 |     // Verify success bar visible
+  187 |     await expect(cartPage.successBar)
+  188 |         .toBeVisible();
+  189 | });
+  190 | 
+  191 | 
+  192 | // TC_CART_09 → Verify Quantity Persistence
+  193 | 
+  194 | test('TC_CART_09 Verify Quantity Persistence', async ({ page }) => {
+  195 | 
+  196 |     const cartPage = new CartPage(page);
+  197 | 
+  198 |     // Open product page
+  199 |     await cartPage.gotoProductPage();
+  200 | 
+  201 |     // Select processor
+  202 |     await cartPage.selectProcessor();
+  203 | 
+  204 |     // Add product
+  205 |     await cartPage.addProductToCart();
+  206 | 
+  207 |     // Open cart
+  208 |     await cartPage.openCart();
+  209 | 
+  210 |     // Verify quantity input visible
+  211 |     await expect(cartPage.quantityInput)
+  212 |         .toBeVisible();
+  213 | });
+  214 | 
+  215 | 
+  216 | // TC_CART_10 → Verify Negative Quantity Handling
+  217 | 
+  218 | test('TC_CART_10 Verify Negative Quantity Handling', async ({ page }) => {
+  219 | 
+  220 |     const cartPage = new CartPage(page);
+  221 | 
+  222 |     // Open product page
+  223 |     await cartPage.gotoProductPage();
+  224 | 
+  225 |     // Select processor
+  226 |     await cartPage.selectProcessor();
+  227 | 
+  228 |     // Add product
+  229 |     await cartPage.addProductToCart();
+  230 | 
+  231 |     // Open cart
+  232 |     await cartPage.openCart();
+  233 | 
+  234 |     // Fill negative quantity
+> 235 |     await cartPage.quantityInput.first().fill('-1');
+      |                                          ^ Error: locator.fill: Test timeout of 60000ms exceeded.
+  236 | 
+  237 |     // Verify entered value
+  238 |     await expect(cartPage.quantityInput.first())
+  239 |         .toHaveValue('-1');
+  240 | });
+  241 | 
+  242 | 
+  243 | // TC_CART_11 → Verify Cart Page Navigation
+  244 | 
+  245 | test('TC_CART_11 Verify Cart Page Navigation', async ({ page }) => {
+  246 | 
+  247 |     const cartPage = new CartPage(page);
+  248 | 
+  249 |     // Open homepage
+  250 |     await page.goto(
+  251 |         'https://demowebshop.tricentis.com'
+  252 |     );
+  253 | 
+  254 |     // Open cart
+  255 |     await cartPage.openCart();
+  256 | 
+  257 |     // Verify cart URL
+  258 |     await expect(page)
+  259 |         .toHaveURL(/cart/);
+  260 | });
+  261 | 
+  262 | // TC_CART_12 → Verify Cart Product Details
+  263 | 
+  264 | test('TC_CART_12 Verify Cart Product Details', async ({ page }) => {
+  265 | 
+  266 |     const cartPage = new CartPage(page);
+  267 | 
+  268 |     // Open product page
+  269 |     await cartPage.gotoProductPage();
+  270 | 
+  271 |     // Select processor
+  272 |     await cartPage.selectProcessor();
+  273 | 
+  274 |     // Add product
+  275 |     await cartPage.addProductToCart();
+  276 | 
+  277 |     // Open cart
+  278 |     await cartPage.openCart();
+  279 | 
+  280 |     // Verify product price visible
+  281 |     await expect(cartPage.productPrice)
+  282 |         .toBeVisible();
+  283 | });
+  284 | 
+  285 | // TC_CART_13 → Verify Cart Refresh Persistence
+  286 | 
+  287 | test('TC_CART_13 Verify Cart Refresh Persistence', async ({ page }) => {
+  288 | 
+  289 |     const cartPage = new CartPage(page);
+  290 | 
+  291 |     // Open product page
+  292 |     await cartPage.gotoProductPage();
+  293 | 
+  294 |     // Select processor
+  295 |     await cartPage.selectProcessor();
+  296 | 
+  297 |     // Add product
+  298 |     await cartPage.addProductToCart();
+  299 | 
+  300 |     // Open cart
+  301 |     await cartPage.openCart();
+  302 | 
+  303 |     // Refresh page
+  304 |     await page.reload();
+  305 | 
+  306 |     // Verify cart still visible
+  307 |     await expect(cartPage.cartTable)
+  308 |         .toBeVisible();
+  309 | });
+  310 | 
+  311 | 
+  312 | // TC_CART_14 → Verify Async Cart Update
+  313 | 
+  314 | test('TC_CART_14 Verify Async Cart Update', async ({ page }) => {
+  315 | 
+  316 |     const cartPage = new CartPage(page);
+  317 | 
+  318 |     // Open product page
+  319 |     await cartPage.gotoProductPage();
+  320 | 
+  321 |     // Select processor
+  322 |     await cartPage.selectProcessor();
+  323 | 
+  324 |     // Add product
+  325 |     await cartPage.addProductToCart();
+  326 | 
+  327 |     // Wait for async loading
+  328 |     await page.waitForLoadState('networkidle');
+  329 | 
+  330 |     // Verify success notification
+  331 |     await expect(cartPage.successBar)
+  332 |         .toContainText('The product has been added');
+  333 | 
+  334 |     // Screenshot
+  335 |     await page.screenshot({
+```

@@ -69,6 +69,8 @@ class CartPage {
     async openCart() {
 
         await this.shoppingCartLink.click();
+        //await this.page.waitForURL('**/cart');
+
     }
 }
 

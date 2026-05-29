@@ -19,6 +19,7 @@ module.exports = defineConfig({
   // 
   
   use: {
+  baseURL: 'https://demowebshop.tricentis.com',
   headless: true,
   screenshot: 'only-on-failure',
   trace: 'on-first-retry'
