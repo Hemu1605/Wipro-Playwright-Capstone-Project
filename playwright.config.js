@@ -16,7 +16,7 @@ module.exports = defineConfig({
     ['allure-playwright']
   ],
 
-   
+  //
   
   use: {
   baseURL: 'https://demowebshop.tricentis.com',
