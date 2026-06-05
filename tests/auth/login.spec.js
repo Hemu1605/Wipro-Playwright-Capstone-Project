@@ -111,7 +111,7 @@ test('TC_AUTH_10 Verify login using Enter key', async ({ page }) => {
 
 // TC_AUTH_14 → Async Loader Validation
 
-test('TC_AUTH_14 Verify async login processing', async ({ page }) => {
+test('TC_AUTH_14 Verify async login processing _addon test cases', async ({ page }) => {
 
     const loginPage = new LoginPage(page);
 
@@ -197,7 +197,7 @@ test('TC_AUTH_13 Verify multiple failed login attempts', async ({ page }) => {
 
 // TC_AUTH_15 → API Login Response Validation
 
-test('TC_AUTH_15 Verify login page API response', async ({ page }) => {
+test('TC_AUTH_15 Verify login page API response(_addon test cases', async ({ page }) => {
 
     // Capture login page response
     const response = await page.goto(

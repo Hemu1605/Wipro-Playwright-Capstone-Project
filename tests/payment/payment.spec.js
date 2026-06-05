@@ -224,7 +224,7 @@ test('TC_PAY_12 Verify Order Summary Visibility', async ({ page }) => {
 
 // TC_PAY_13 → Verify Payment Navigation URL
 
-test('TC_PAY_13 Verify Payment Navigation URL', async ({ page }) => {
+test('TC_PAY_13 Verify Payment Navigation URL _addon test cases', async ({ page }) => {
 
     // Open homepage
     await page.goto(
@@ -238,7 +238,7 @@ test('TC_PAY_13 Verify Payment Navigation URL', async ({ page }) => {
 
 // TC_PAY_14 → Verify Payment Screenshot Capture
 
-test('TC_PAY_14 Verify Payment Screenshot Capture', async ({ page }) => {
+test('TC_PAY_14 Verify Payment Screenshot Capture _addon test cases', async ({ page }) => {
 
     const paymentPage = new PaymentPage(page);
 
@@ -261,7 +261,7 @@ test('TC_PAY_14 Verify Payment Screenshot Capture', async ({ page }) => {
 
 // TC_PAY_15 → Verify Payment API Response
 
-test('TC_PAY_15 Verify Payment API Response', async ({ page }) => {
+test('TC_PAY_15 Verify Payment API Response _addon test cases', async ({ page }) => {
 
     // Open payment related page
     const response = await page.goto(

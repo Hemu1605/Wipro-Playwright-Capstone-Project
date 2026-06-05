@@ -308,7 +308,7 @@ test('TC_CHK_12 Verify Checkout Page Refresh', async ({ page }) => {
 
 // TC_CHK_13 → Verify Checkout Total Visibility
 
-test('TC_CHK_13 Verify Checkout Total Visibility', async ({ page }) => {
+test('TC_CHK_13 Verify Checkout Total Visibility _addon test cases', async ({ page }) => {
 
     const checkoutPage = new CheckoutPage(page);
 
@@ -328,7 +328,7 @@ test('TC_CHK_13 Verify Checkout Total Visibility', async ({ page }) => {
 
 // TC_CHK_14 → Verify Async Checkout Loading
 
-test('TC_CHK_14 Verify Async Checkout Loading', async ({ page }) => {
+test('TC_CHK_14 Verify Async Checkout Loading _addon test cases', async ({ page }) => {
 
     const checkoutPage = new CheckoutPage(page);
 
@@ -355,7 +355,7 @@ test('TC_CHK_14 Verify Async Checkout Loading', async ({ page }) => {
 
 // TC_CHK_15 → Verify Checkout API Response
 
-test('TC_CHK_15 Verify Checkout API Response', async ({ page }) => {
+test('TC_CHK_15 Verify Checkout API Response _addon test cases', async ({ page }) => {
 
     // Open checkout page
     const response = await page.goto(

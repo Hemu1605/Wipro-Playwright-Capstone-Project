@@ -203,7 +203,7 @@ test('TC_PDT_12 Verify wishlist page navigation', async ({ page }) => {
 
 // TC_PDT_13 → Verify stock validation
 
-test('TC_PDT_13 Verify stock validation', async ({ page }) => {
+test('TC_PDT_13 Verify stock validation _addon test cases', async ({ page }) => {
 
     const productPage = new ProductPage(page);
 
@@ -218,7 +218,7 @@ test('TC_PDT_13 Verify stock validation', async ({ page }) => {
 
 // TC_PDT_14 → Verify async image loading
 
-test('TC_PDT_14 Verify async image loading', async ({ page }) => {
+test('TC_PDT_14 Verify async image loading _addon test cases', async ({ page }) => {
 
     const productPage = new ProductPage(page);
 
@@ -241,7 +241,7 @@ test('TC_PDT_14 Verify async image loading', async ({ page }) => {
 
 // TC_PDT_15 → Verify product detail API response
 
-test('TC_PDT_15 Verify product detail API response', async ({ page }) => {
+test('TC_PDT_15 Verify product detail API response _addon test cases', async ({ page }) => {
 
     // Open product page
     const response = await page.goto(

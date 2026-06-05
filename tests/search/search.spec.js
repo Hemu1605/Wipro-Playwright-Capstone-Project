@@ -239,7 +239,7 @@ test('TC_SRH_12 Verify descending sorting', async ({ page }) => {
 
 // TC_SRH_13 → Verify filtering
 
-test('TC_SRH_13 Verify filtering after search', async ({ page }) => {
+test('TC_SRH_13 Verify filtering after search _addon test cases', async ({ page }) => {
 
     const searchPage = new SearchPage(page);
 
@@ -257,7 +257,7 @@ test('TC_SRH_13 Verify filtering after search', async ({ page }) => {
 
 // TC_SRH_14 → Verify async loader
 
-test('TC_SRH_14 Verify async product loading', async ({ page }) => {
+test('TC_SRH_14 Verify async product loading _addon test cases', async ({ page }) => {
 
     const searchPage = new SearchPage(page);
 
@@ -283,7 +283,7 @@ test('TC_SRH_14 Verify async product loading', async ({ page }) => {
 
 // TC_SRH_15 → Verify search API response
 
-test('TC_SRH_15 Verify search API response', async ({ page }) => {
+test('TC_SRH_15 Verify search API response _addon test cases', async ({ page }) => {
 
     // Open search page
     const response = await page.goto(

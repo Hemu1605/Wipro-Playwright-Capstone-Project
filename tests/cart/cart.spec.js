@@ -112,7 +112,7 @@ test('TC_CART_02 Verify Cart Quantity Update', async ({ page }) => {
 // });
 
 
-test.only('TC_CART_03 Verify Remove Product From Cart', async ({ page }) => {
+test('TC_CART_03 Verify Remove Product From Cart', async ({ page }) => {
 
     const cartPage = new CartPage(page);
 
@@ -339,7 +339,7 @@ test('TC_CART_12 Verify Cart Product Details', async ({ page }) => {
 
 // TC_CART_13 → Verify Cart Refresh Persistence
 
-test('TC_CART_13 Verify Cart Refresh Persistence', async ({ page }) => {
+test('TC_CART_13 Verify Cart Refresh Persistence _addon test cases', async ({ page }) => {
 
     const cartPage = new CartPage(page);
 
@@ -366,7 +366,7 @@ test('TC_CART_13 Verify Cart Refresh Persistence', async ({ page }) => {
 
 // TC_CART_14 → Verify Async Cart Update
 
-test('TC_CART_14 Verify Async Cart Update', async ({ page }) => {
+test('TC_CART_14 Verify Async Cart Update _addon test cases', async ({ page }) => {
 
     const cartPage = new CartPage(page);
 
@@ -397,7 +397,7 @@ test('TC_CART_14 Verify Async Cart Update', async ({ page }) => {
 
 // TC_CART_15 → Verify Cart API Response
 
-test('TC_CART_15 Verify Cart API Response', async ({ page }) => {
+test('TC_CART_15 Verify Cart API Response _addon test cases', async ({ page }) => {
 
     // Open cart page
     const response = await page.goto(
